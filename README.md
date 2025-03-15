@@ -5,7 +5,8 @@ The following repository offers the BlueROV2 simulation SITL with GazeboSim. Use
 SITL allows you to simulate the vehicle hardware and firmware ([ArduSub](https://www.ardusub.com/) ) on your host directly.
 
 
-![image](https://github.com/user-attachments/assets/fbe0eb2e-aff5-4094-8fd1-d147be70916b)
+![image](https://github.com/user-attachments/assets/64d262c0-5a9e-4808-a12e-3bfa3e6461a4)
+
 
 
 ## Prerequisites
