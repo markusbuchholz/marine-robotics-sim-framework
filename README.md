@@ -164,5 +164,33 @@ ros2 run plotjuggler plotjuggler
 - [blue](https://github.com/Robotic-Decision-Making-Lab/blue)
 - [orca4](https://github.com/clydemcqueen/orca4)
 
+## References
+
+- [ROS-Gazebo Bridge](https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_bridge)
+- [Ardupilot_gazebo](https://github.com/ArduPilot/ardupilot_gazebo)
+- [Gazebo demos](https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_sim_demos)
+- [BlueBoat operational manual](https://bluerobotics.com/learn/blueboat-operators-guide/)
+- [QGroundControl User Guide](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/)
+- [BlueBoat SITL](https://github.com/ArduPilot/SITL_Models/blob/master/Gazebo/docs/BlueBoat.md)
+- [ArduPilot and Gazebo](https://ardupilot.org/dev/docs/sitl-with-gazebo.html)
+- [SITL](https://www.ardusub.com/developers/sitl.html)
+- [Wave Sim](https://github.com/srmainwaring/asv_wave_sim)
+- [icra2023_ros2_gz_tutorial](https://github.com/osrf/icra2023_ros2_gz_tutorial?tab=readme-ov-file#overview)
+- [Gazebo Ocean Simulation](https://docs.google.com/presentation/d/1JXwWMPPVT7y03Vr6cWtrwAwyvdysmg3NW9ZmI276dMY/edit#slide=id.p)
+- [Multi-LRAUV Simulation](https://docs.google.com/presentation/d/1RIuvOOTdQvoAKKRzGnNZW8Ikp_VGVaUOyAZc-BANXdo/edit#slide=id.g71c89e7412_2_52)
+- [rover-sitl](https://ardupilot.org/dev/docs/rover-sitlmavproxy-tutorial.html)
+- [cruise-throttle-and-cruise-speed](https://ardupilot.org/rover/docs/rover-tuning-throttle-and-speed.html#cruise-throttle-and-cruise-speed) - refer to the doc. for instructions on how to set global velocity and acc.
+- [Rover: L1 navigation overview](https://ardupilot.org/dev/docs/rover-L1.html)
+- [Extended Kalman Filter Navigation Overview and Tuning](https://ardupilot.org/dev/docs/extended-kalman-filter.html)
+- [Rover Control Modes](https://ardupilot.org/rover/docs/rover-control-modes.html)
+- [Dynamic position mode](https://ardupilot.org/rover/docs/loiter-mode.html)
+- [flight-modes](https://ardupilot.org/copter/docs/flight-modes.html)
+- [common-non-gps-navigation](https://ardupilot.org/copter/docs/common-non-gps-navigation-landing-page.html)
+- [Guided Mode](https://ardupilot.org/copter/docs/ac2_guidedmode.html)
+- [ArduPilot-ROVER](https://ardupilot.org/rover/index.html)
+- [GPS / Non-GPS Transitions](https://ardupilot.org/copter/docs/common-non-gps-to-gps.html)
+- [EKF Failsafe](https://ardupilot.org/copter/docs/ekf-inav-failsafe.html)
+- [tuning-navigation](https://ardupilot.org/rover/docs/rover-tuning-navigation.html)
+
 
 
