@@ -20,9 +20,9 @@ SITL allows you to simulate the vehicle hardware and firmware ([ArduSub](https:/
 ## Build
 
 ```bash
-git clone https://github.com/markusbuchholz/gazebosim_bluerov2_ardupilot_sitl.git
+git clone https://github.com/markusbuchholz/marine-robotics-sim-framework/git
 
-cd gazebosim_bluerov2_ardupilot_sitl/bluerov2_ardupilot_SITL/docker
+cd marine-robotics-sim-framework//bluerov2_ardupilot_SITL/docker
 
 sudo ./build.sh
 
@@ -52,41 +52,6 @@ source install/setup.bash
 
 source gazebo_exports.sh
  
-```
----
-
-## BlueRov2 and Reach Alpha
-
-```bash
-sudo apt install ros-humble-ros2-control ros-humble-hardware-interface
-sudo apt install ros-humble-moveit
-sudo apt install ros-humble-ros2-controllers ros-humble-ros2-control
-```
-
-
-
-```bash
-ros2 launch alpha_bringup alpha.launch.py
-```
-
-```bash
-ros2 launch alpha_bringup alpha.launch.py --show-args
-```
-
-
-
-```bash
-cd /home/blueboat_sitl/SITL_Models/Gazebo/models/alpha
-
-gz sim model.sdf
-```
-
-```bash
-colcon build --symlink-install --merge-install --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=ON -DCMAKE_CXX_STANDARD=17
-```
-
-```bash
-ros2 launch move_blueboat launch_rov_alpha.launch.py
 ```
 ---
 
@@ -193,25 +158,6 @@ ros2 launch move_blueboat wp_velo_rov
 ```bash
 ros2 run plotjuggler plotjuggler
 ```
-
-## Run Motor Test (PWM control)
-
-Setting the ArduSub [RCPassThru](https://ardupilot.org/copter/docs/parameters.html#servo1-function-servo-output-function) parameter allows setting PWM directly for individual motors with values ranging from 1100 to 1900.
-
-```bash
-ros2 run plotjuggler plotjuggler
-
-cd extras
-
-python3 test_motor_thrust.py
-```
-![image](https://github.com/oceansystemslab/bluerov2_ardupilot_SITL/assets/30973337/79f27219-d755-482e-8fcf-7b5d4d39c53d)
-
-### Performance Charts 
-[Details](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster-r2-rp/)
-
-![image](https://github.com/oceansystemslab/bluerov2_ardupilot_SITL/assets/30973337/a8924194-1262-4255-b896-6182d27357b7)
-
 
 ## Acknowledgement
 
