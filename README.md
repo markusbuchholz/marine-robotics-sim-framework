@@ -1,4 +1,4 @@
-# Marine Robotics Simulation Framwork
+# Marine Robotics Simulation Framework
 
 This repository provides a simulation framework for evaluating motion control in tethered multi-robot systems within dynamic marine environments. Specifically, it focuses on the coordinated operation of an Autonomous Underwater Vehicle (AUV) and an Autonomous Surface Vehicle (ASV).
 The framework leverages GazeboSim, enhanced with realistic marine environment plugins and ArduPilot's Software-In-The-Loop (SITL) mode, to provide a high-fidelity simulation platform. A detailed tether model, combining catenary equations and physical simulation, is integrated to represent accurately the dynamic interactions between the vehicles and the environment. This setup facilitates the development and testing of advanced control strategies under realistic conditions, demonstrating the framework's capability to analyze complex tether interactions and their impact on system performance.
