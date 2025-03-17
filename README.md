@@ -178,6 +178,20 @@ We consider the tether to hold the ```catenary``` shape.
 ```
 
 
+## Simulate the position of the tether
+
+Run,
+```bash
+cd extras_tether
+
+python3 dynamic_update_cabel_pos.py
+```
+
+
+
+![image](https://github.com/user-attachments/assets/885abed6-2334-42dc-bf4f-20a5430df920)
+
+
 
 ---
 ## Start QGC (outside Docker)
