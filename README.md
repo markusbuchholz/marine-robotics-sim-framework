@@ -115,6 +115,13 @@ python3 ros2_blueboat_interface.py
 ```
 
 ---
+## Tether modeling
+
+We consider a tether which is composed of ```N``` spheres, each of mass m and radius ```r```. 
+The spheres are connected sequentially, with each pair of adjacent spheres connected by a ball-type joint.
+The joint allows the spheres to rotate relative to each other in two perpendicular directions, simulating the flexibility of an actual underwater tether.
+We consider the tether to hold the ```catenary``` shape. 
+
 
 ```xml
 <?xml version="1.0" ?>
