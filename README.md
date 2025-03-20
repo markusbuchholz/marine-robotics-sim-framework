@@ -6,8 +6,10 @@ The framework leverages GazeboSim, enhanced with realistic marine environment pl
 
 SITL allows you to simulate the vehicle hardware and firmware ([ArduSub](https://www.ardusub.com/) ) on your host directly.
 
+![gazebo](https://github.com/user-attachments/assets/56ec1bcf-d860-478f-aedd-edbe9974b36e)
 
 ![image](https://github.com/user-attachments/assets/64d262c0-5a9e-4808-a12e-3bfa3e6461a4)
+
 
 
 
