@@ -207,6 +207,7 @@ ros2 run plotjuggler plotjuggler
 
 ## Acknowledgement
 
+- [Rhys Mainwaring](https://github.com/srmainwaring)
 - [blue](https://github.com/Robotic-Decision-Making-Lab/blue)
 - [orca4](https://github.com/clydemcqueen/orca4)
 
