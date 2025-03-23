@@ -28,8 +28,8 @@ sudo ./build.sh
 Adjust in ```run.sh```.
 
 ```bash
-local_gz_ws="/home/markus/bluerov2_ardupilot_SITL/gz_ws"
-local_SITL_Models="/home/markus/bluerov2_ardupilot_SITL/SITL_Models"
+local_gz_ws="/home/markus/underwater/marine-robotics-sim-framework/gz_ws"
+local_SITL_Models="/home/markus/underwater/marine-robotics-sim-framework/SITL_Models"
 ```
 
 ```bash
