@@ -50,22 +50,22 @@ source gazebo_exports.sh
 ```
 ---
 
-## Run Gazebo BlueRov2 simulator
+## Run simulator
 
 Note:
-- IMPORTANT: Run Gazebo first as it contains the ArduPilot plugin. Later, start the ArduPilot SITL (Rover) simulator. Lastly, you can run QGroundControl.
+- IMPORTANT: Run GazeboSim first as it contains the ArduPilot plugin. Later, start the ArduPilot SITL (ArduSub, Rover). Lastly, you can run QGroundControl.
 
 ```bash
-ros2 launch move_blueboat launch_robot_simulation.launch.py
+ros2 launch move_blueboat multirobot_mission_simulation.launch.py
 ```
 
-You can alway connect to running Docker container from other terminal,
+You can always connect to running Docker containers from other terminals,
 
 ```bash
-sudo docker exec -it bluerov2_sitl /bin/bash
-
+sudo docker exec -it marine_robotics_sitl /bin/bash
 ```
 ---
+
 ## Run SITL
 
 Notes:
@@ -77,36 +77,37 @@ Notes:
 
 ```bash
 
-sudo docker exec -it simulation_sitl /bin/bash
+sudo docker exec -it marine_robotics_sitl /bin/bash
 
 cd ../ardupilot
 
-sim_vehicle.py -v ArduSub -f vectored_6dof --model JSON --map --console -l 55.99541530863445,-3.3010225004910683,0,0
+# ArduSub (BlueROV2)
+sim_vehicle.py -v ArduSub -f vectored_6dof --model JSON --map --console -l 55.99541530863445,-3.3010225004910683,0,0 -I0
 
-# if you need to recompile 
-Tools/environment_install/install-prereqs-ubuntu.sh -y
-
-# after recompiling 
-. ~/.profile
+# ArduRover (BlueBoat)
+sim_vehicle.py -v Rover -f gazebo-rover --model JSON --map --console -l 55.99541530863445,-3.3010225004910683,0,0 -I1
 
 ```
 ---
-## BlueBoat SITL
 
+## ROS 2 Interfaces
+
+There are simple ROS 2 interfaces to wrap ```mavlink```. 
+
+BlueROV2,
 
 ```bash
+gz_ws/extras_interface
 
-ros2 run joy joy_node
+python3 ros2_bluerov2_interface.py
+```
 
-colcon build --symlink-install --merge-install --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=ON -DCMAKE_CXX_STANDARD=17
+BlueBoat,
 
-ros2 launch move_blueboat launch_robot_simulation.launch.py
+```bash
+gz_ws/extras_interface
 
-sim_vehicle.py -v Rover -f gazebo-rover --model JSON --map --console -l 55.99541530863445,-3.3010225004910683,0,0 -I1
-
-cd /home/blueboat_sitl/gz_ws/extras_interface
 python3 ros2_blueboat_interface.py
-
 ```
 
 ---
@@ -193,37 +194,6 @@ python3 dynamic_update_cabel_pos.py
 
 ```bash
 ./QGroundControl.AppImage
-```
-
-## Move BlueRov2
-
-Move the vehicle using Ardusub to navigate the designated waypoints, utilizing either ROS 2 or ArduPilot.
-
-```bash
-# It is recommended to Arm the vehicle first
-
-arm throttle
-```
-
-```bash
-ros2 launch move_blueboat wp_rov
-```
-
-```bash
-cd  /gz_ws/src/extras_rov
-
-python3 wp_pos_req.py
-```
-
-## Change the Motion Velocity
-
-The following program, before motion, changes the ArduSub parameters influencing the global velocity motion for the vehicle.
-- ```WPNAV_SPEED``` - for horizontal speed
-- ```WPNAV_SPEED_DN``` - for descent speed
-- ```WPNAV_SPEED_UP``` - for climb speed
-
-```bash
-ros2 launch move_blueboat wp_velo_rov
 ```
 
 ## PlotJuggler
