@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="tether_part5">        
+
+    <link name="base_link">
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.025</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 0.0 1.0</ambient>  <!-- Bright red -->
+          <diffuse>1.0 0.0 0.0 1.0</diffuse>  <!-- Bright red -->
+          <specular>0.8 0.8 0.8 1.0</specular> <!-- Slightly reflective -->
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <!-- <radius>0.01</radius> -->
+             <radius>0.01</radius>
+          </sphere>
+        </geometry>
+      </collision>
+ <!-- <mass>0.00429</mass> !!!!!!!NEUTRAL !!!!!!!!!!!!!!!!!!!!!!!!!!!! --> 
+ <!-- <mass>0.00429</mass> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --> 
+ <!-- <mass>0.00429</mass> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --> 
+ <!-- <mass>0.00429</mass> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --> 
+ <!-- <mass>0.00429</mass> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --> 
+
+      <inertial>
+        <!-- <mass>0.002</mass>  --> 
+        <mass>0.00429</mass> 
+        <inertia>
+          <!-- Recalculated based on the solid sphere inertia formula -->
+          <ixx>0.00000006</ixx> <!-- 2/5 * mass * radius^2 -->
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.00000006</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.00000006</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+      <plugin
+        filename="gz-sim-hydrodynamics-system"
+        name="gz::sim::systems::Hydrodynamics">
+        <link_name>base_link</link_name>
+        <xDotU>0</xDotU>
+        <yDotV>0</yDotV>
+        <zDotW>0</zDotW>
+        <kDotP>0</kDotP>
+        <mDotQ>0</mDotQ>
+        <nDotR>0</nDotR>
+        <xUabsU>0</xUabsU>
+        <xU>-5</xU>
+        <yVabsV>-60.127</yVabsV>
+        <yV>-5</yV>
+        <zWabsW>-6.0127</zWabsW>
+        <zW>0</zW>
+        <kPabsP>0</kPabsP>
+        <kP>0</kP>
+        <mQabsQ>0</mQabsQ>
+        <mQ>0</mQ>
+        <nRabsR>0</nRabsR>
+        <nR>0</nR>
+	<default_current>0 -2 0</default_current>
+      </plugin>
+  </model>
+</sdf>
+
+
+    <!-- hydrodynamics plugin -->
+    <!-- <plugin name="gz::sim::systems::Hydrodynamics" 
+        filename="gz-waves1-hydrodynamics-system">
+        <enable>blueboat::base_link</enable>
+        <hydrodynamics>
+          <damping_on>1</damping_on>
+          <viscous_drag_on>1</viscous_drag_on>
+          <pressure_drag_on>1</pressure_drag_on>
+        </hydrodynamics>
+    </plugin> -->

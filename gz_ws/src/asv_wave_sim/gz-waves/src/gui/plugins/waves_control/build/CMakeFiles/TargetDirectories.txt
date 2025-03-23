@@ -1,0 +1,4 @@
+/home/orca4/gz_ws/src/asv_wave_sim/gz-waves/src/gui/plugins/waves_control/build/CMakeFiles/WavesControl.dir
+/home/orca4/gz_ws/src/asv_wave_sim/gz-waves/src/gui/plugins/waves_control/build/CMakeFiles/edit_cache.dir
+/home/orca4/gz_ws/src/asv_wave_sim/gz-waves/src/gui/plugins/waves_control/build/CMakeFiles/rebuild_cache.dir
+/home/orca4/gz_ws/src/asv_wave_sim/gz-waves/src/gui/plugins/waves_control/build/CMakeFiles/WavesControl_autogen.dir

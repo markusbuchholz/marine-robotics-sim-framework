@@ -1,0 +1,398 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="waves">
+
+
+
+
+    <plugin filename="gz-sim-physics-system"
+            name="gz::sim::systems::Physics">
+    </plugin>
+    
+
+    <!-- <physics type="dart" name="dart_physics">
+      <max_step_size>0.001</max_step_size> 
+      <real_time_factor>1</real_time_factor>
+      <solver>
+        <iters>100</iters> 
+        <type>dantzig</type> 
+      </solver>
+    </physics> -->
+
+      <!-- Physics parameters -->
+    <!-- <physics name="1ms" type="dart">
+      <max_step_size>0.002</max_step_size>
+      <real_time_factor>500</real_time_factor>
+    </physics> -->
+
+
+<!-- <physics type="ode">
+  <max_step_size>0.002</max_step_size>
+  <real_time_factor>1.0</real_time_factor>
+  <real_time_update_rate>500</real_time_update_rate>
+</physics> -->
+
+<!-- <physics type="ode">
+  <max_step_size>0.004</max_step_size>
+  <real_time_factor>1.0</real_time_factor>
+  <real_time_update_rate>1000</real_time_update_rate>
+</physics> -->
+
+
+    <plugin filename="gz-sim-sensors-system"
+            name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+      <background_color>0.8 0.8 0.8</background_color>
+    </plugin>
+
+    <plugin filename="gz-sim-scene-broadcaster-system"
+            name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <plugin filename="gz-sim-user-commands-system"
+            name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin filename="gz-sim-imu-system"
+            name="gz::sim::systems::Imu">
+    </plugin>
+
+
+
+
+
+    <!-- <plugin
+      filename="gz-sim-buoyancy-system"
+      name="gz::sim::systems::Buoyancy">
+      <graded_buoyancy>
+        <default_density>1000</default_density>
+        <density_change>
+          <above_depth>0</above_depth>
+          <density>1</density>
+        </density_change>
+      </graded_buoyancy>
+      <enable>bluerov2_heavy</enable>
+    </plugin> -->
+
+    <!-- <plugin
+      filename="gz-sim-buoyancy-system"
+      name="gz::sim::systems::Buoyancy">
+      <graded_buoyancy>
+        <default_density>1025</default_density>
+        <density_change>
+          <above_depth>0</above_depth>
+          <density>1.125</density>
+        </density_change>
+      </graded_buoyancy>
+      <enable>bluerov2_heavy</enable>
+       <enable>blueboat</enable>
+    </plugin> -->
+
+    <!-- Processes the NavSat sensor -->
+    <plugin
+      filename="gz-sim-navsat-system"
+      name="gz::sim::systems::NavSat">
+    </plugin>
+
+        <!-- Set the coordinates for the world origin -->
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>-22.986687</latitude_deg>
+      <longitude_deg>-43.202501</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+
+    <scene>
+      <ambient>1.0 1.0 1.0</ambient>
+      <background>0.8 0.8 0.8</background>
+      <sky></sky>
+    </scene>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.6 0.6 0.6 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <uri>model://waves</uri>
+    </include>
+
+
+    <include>
+      <pose>5 0 -6 0 0 0</pose>
+      <uri>model://wind_turbine</uri>
+    </include>
+
+
+    <include>
+      <pose>10.5 0 -6 0 0 0</pose>
+      <uri>model://bop_panel</uri>
+    </include>
+
+
+  <!-- Define global parameters -->
+  <xacro:property name="joint_limit_lower" value="-1.5" />
+  <xacro:property name="joint_limit_upper" value="1.5" />
+  <xacro:property name="joint_damping" value="0.05" />
+
+<!-- Include the BlueBoat -->
+<include>
+  <pose>0 0 0 0 0 0</pose>
+  <uri>model://blueboat</uri>
+</include>
+
+<!-- Include the first Barrage Buoy -->
+<include>
+  <pose>-0.5 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_1</name>
+</include>
+
+
+<joint name="blueboat_to_barragebuoy1_joint" type="ball">
+  <parent>blueboat::base_link</parent>
+  <child>tether_part_1::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+
+
+<!-- Barrage Buoy 2 -->
+<include>
+  <pose>-1.0 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_2</name>
+</include>
+
+<joint name="barragebuoy1_to_barragebuoy2_joint" type="ball">
+  <parent>tether_part_1::base_link</parent>
+  <child>tether_part_2::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Barrage Buoy 3 -->
+<include>
+  <pose>-1.5 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_3</name>
+</include>
+
+<joint name="barragebuoy2_to_barragebuoy3_joint" type="ball">
+  <parent>tether_part_2::base_link</parent>
+  <child>tether_part_3::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Barrage Buoy 4 -->
+<include>
+  <pose>-2.0 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_4</name>
+</include>
+
+<joint name="barragebuoy3_to_barragebuoy4_joint" type="ball">
+  <parent>tether_part_3::base_link</parent>
+  <child>tether_part_4::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Barrage Buoy 5 -->
+<include>
+  <pose>-2.5 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_5</name>
+</include>
+
+<joint name="barragebuoy4_to_barragebuoy5_joint" type="ball">
+  <parent>tether_part_4::base_link</parent>
+  <child>tether_part_5::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Barrage Buoy 6 -->
+<include>
+  <pose>-3.0 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_6</name>
+</include>
+
+<joint name="barragebuoy5_to_barragebuoy6_joint" type="ball">
+  <parent>tether_part_5::base_link</parent>
+  <child>tether_part_6::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Barrage Buoy 7 -->
+<include>
+  <pose>-3.5 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_7</name>
+</include>
+
+<joint name="barragebuoy6_to_barragebuoy7_joint" type="ball">
+  <parent>tether_part_6::base_link</parent>
+  <child>tether_part_7::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Barrage Buoy 8 -->
+<include>
+  <pose>-4.0 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_8</name>
+</include>
+
+<joint name="barragebuoy7_to_barragebuoy8_joint" type="ball">
+  <parent>tether_part_7::base_link</parent>
+  <child>tether_part_8::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Barrage Buoy 9 -->
+<include>
+  <pose>-4.5 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_9</name>
+</include>
+
+<joint name="barragebuoy8_to_barragebuoy9_joint" type="ball">
+  <parent>tether_part_8::base_link</parent>
+  <child>tether_part_9::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Barrage Buoy 10 -->
+<include>
+  <pose>-5.0 0 0 0 0 0</pose>
+  <uri>model://tether_part5</uri>
+  <name>tether_part_10</name>
+</include>
+
+<joint name="barragebuoy9_to_barragebuoy10_joint" type="ball">
+  <parent>tether_part_9::base_link</parent>
+  <child>tether_part_10::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+<!-- Include the BlueROV2 -->
+<include>
+  <pose>-5.5 0 -0.3 0 0 0</pose>
+  <uri>model://bluerov2_heavy</uri>
+  <name>bluerov2_heavy</name>
+</include>
+
+<!-- Ball Joint connecting the last Barrage Buoy to BlueROV2 -->
+<joint name="barragebuoy10_to_bluerov2_joint" type="ball">
+  <parent>tether_part_10::base_link</parent>
+  <child>bluerov2_heavy::base_link</child>
+  <pose>0 0 0 0 0 0</pose>
+   <physics>
+      <limit>
+        <lower>${joint_limit_lower}</lower>
+        <upper>${joint_limit_upper}</upper>
+      </limit>
+      <dynamics>
+        <damping>${joint_damping}</damping>
+      </dynamics>
+    </physics>
+</joint>
+
+
+
+
+  </world>
+</sdf>

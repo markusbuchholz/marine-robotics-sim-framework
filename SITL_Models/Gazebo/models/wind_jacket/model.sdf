@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!--Yaniel Carreno
+   Wind Turbine description
+-->
+<sdf version="1.0">
+  <model name="wind_jacket">
+    <static>true</static>
+    <pose>0 0 0.1 0 0 0</pose>
+    <link name="turbine">
+      <collision name="turbine_collision">
+        <geometry>
+          <mesh>
+            <uri>model://wind_jacket/meshes/wind_jacket.stl</uri>
+            <scale>0.013 0.013 0.013</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="turbine_visual">
+        <geometry>
+          <mesh>
+            <uri>model://wind_jacket/meshes/wind_jacket.obj</uri>
+            <scale>0.013 0.013 0.013</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://Media/materials/scripts/fiducials.material</uri>
+            <name>Wind/Turbine</name>
+          </script>
+        </material>
+      </visual>
+      <self_collide>0</self_collide>
+    </link>
+
+  </model>
+</sdf>

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="tether_part10">        
+    <plugin
+        filename="gz-waves1-hydrodynamics-system"
+        name="gz::sim::systems::Hydrodynamics">
+        <!-- Ocean current vector -->
+        <!-- 45-degree current with magnitude 1 m/s -->  
+        <default_current>0 -100 0</default_current> 
+    
+        <!-- https://gazebosim.org/api/sim/8/theory_hydrodynamics.html -->
+        <!-- Set the buoyancy properties to make it slightly negative or neutral -->
+
+    </plugin>
+    
+    <link name="base_link">
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.025</radius> <!-- Size of the buoy -->
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 0.0 1.0</ambient>  <!-- Bright red -->
+          <diffuse>1.0 0.0 0.0 1.0</diffuse>  <!-- Bright red -->
+          <specular>0.8 0.8 0.8 1.0</specular> <!-- Slightly reflective -->
+        </material>
+      </visual>
+      
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.01</radius> <!-- Smaller collision radius -->
+          </sphere>
+        </geometry>
+      </collision>
+      
+      <inertial>
+        <mass>0.006</mass> <!-- Slightly increased mass for near-neutral buoyancy -->
+        <inertia>
+          <!-- Recalculated based on the solid sphere inertia formula -->
+          <ixx>0.000000075</ixx> <!-- 2/5 * mass * radius^2 -->
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.000000075</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.000000075</izz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="wind_turbine">
+    <static>true</static>
+    <pose>0 0 0.1 0 0 0</pose>
+
+    <link name="turbine">
+      <collision name="turbine_collision">
+        <geometry>
+          <mesh>
+            <uri>model://wind_turbine/meshes/wind_turbine.stl</uri>
+            <!-- Scale increased by 4 times -->
+            <scale>0.052 0.052 0.052</scale>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <collide_without_contact>false</collide_without_contact>
+            <collide_bitmask>1</collide_bitmask>
+          </contact>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0.0</restitution_coefficient>
+            <threshold>1000.0</threshold>
+          </bounce>
+        </surface>
+      </collision>
+
+      <visual name="turbine_visual">
+        <geometry>
+          <mesh>
+            <uri>model://wind_turbine/meshes/wind_turbine.obj</uri>
+            <!-- Scale increased by 4 times -->
+            <scale>0.002 0.002 0.002</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>true</lighting>
+            <diffuse>1.0 1.0 1.0 1</diffuse> <!-- Shiny white -->
+            <ambient>1.0 1.0 1.0 1</ambient> <!-- Shiny white in ambient light -->
+            <specular>1.0 1.0 1.0 1</specular> <!-- Highly reflective white -->
+          <pbr>
+            <metal>
+              <metalness>0.1</metalness>
+              <roughness>0.2</roughness>
+            </metal>
+          </pbr>
+        </material>
+        <cast_shadows>true</cast_shadows>
+      </visual>
+
+      <self_collide>false</self_collide>
+      <enable_wind>true</enable_wind>
+      <kinematic>false</kinematic>
+    </link>
+  </model>
+</sdf>
+

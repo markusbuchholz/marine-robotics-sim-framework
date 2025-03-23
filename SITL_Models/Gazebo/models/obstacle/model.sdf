@@ -1,0 +1,22 @@
+<sdf version="1.6">
+  <model name="obstacle">
+    <static>true</static>
+
+    <!-- Obstacle block -->
+    <link name="block">
+      <visual name="block_visual">
+        <geometry>
+          <box>
+            <size>1 2 1.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.0 1</ambient> 
+          <diffuse>0.8 0.8 0.0 1</diffuse> 
+        </material>
+        <pose>0 0 1 0 0 0</pose> <!-- centered at (0,0) and 1m above ground -->
+      </visual>
+    </link>
+  </model>
+</sdf>
+

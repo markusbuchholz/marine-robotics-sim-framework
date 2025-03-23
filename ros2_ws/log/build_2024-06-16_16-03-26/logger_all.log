@@ -1,0 +1,202 @@
+[0.044s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.044s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7cd4822d0df0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7cd4822d05e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7cd4822d05e0>>, mixin_verb=('build',))
+[0.061s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.061s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.061s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.061s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.061s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.061s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.061s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/blueboat_slam/ros2_ws'
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extension 'ignore_ament_install'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extensions ['colcon_pkg']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extension 'colcon_pkg'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extensions ['colcon_meta']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extension 'colcon_meta'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extensions ['ros']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_description) by extension 'ros'
+[0.069s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_description' with type 'ros.ament_cmake' and name 'robot_description'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extensions ['ignore', 'ignore_ament_install']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extension 'ignore'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extension 'ignore_ament_install'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extensions ['colcon_pkg']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extension 'colcon_pkg'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extensions ['colcon_meta']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extension 'colcon_meta'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extensions ['ros']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(src/rviz) by extension 'ros'
+[0.069s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rviz' with type 'ros.ament_cmake' and name 'rviz'
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_args' from command line to 'None'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_target' from command line to 'None'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'robot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.078s] DEBUG:colcon.colcon_core.verb:Building package 'robot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/blueboat_slam/ros2_ws/build/robot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/blueboat_slam/ros2_ws/install/robot_description', 'merge_install': False, 'path': '/home/blueboat_slam/ros2_ws/src/robot_description', 'symlink_install': False, 'test_result_base': None}
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'cmake_args' from command line to 'None'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'cmake_target' from command line to 'None'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'cmake_clean_cache' from command line to 'False'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'cmake_clean_first' from command line to 'False'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'cmake_force_configure' from command line to 'False'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'ament_cmake_args' from command line to 'None'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'catkin_cmake_args' from command line to 'None'
+[0.078s] Level 5:colcon.colcon_core.verb:set package 'rviz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.078s] DEBUG:colcon.colcon_core.verb:Building package 'rviz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/blueboat_slam/ros2_ws/build/rviz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/blueboat_slam/ros2_ws/install/rviz', 'merge_install': False, 'path': '/home/blueboat_slam/ros2_ws/src/rviz', 'symlink_install': False, 'test_result_base': None}
+[0.078s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.079s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.079s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/blueboat_slam/ros2_ws/src/robot_description' with build type 'ament_cmake'
+[0.079s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/blueboat_slam/ros2_ws/src/robot_description'
+[0.080s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.080s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.080s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.082s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/blueboat_slam/ros2_ws/src/rviz' with build type 'ament_cmake'
+[0.082s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/blueboat_slam/ros2_ws/src/rviz'
+[0.082s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.082s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.085s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/blueboat_slam/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/blueboat_slam/ros2_ws/src/robot_description -DCMAKE_INSTALL_PREFIX=/home/blueboat_slam/ros2_ws/install/robot_description
+[0.087s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/blueboat_slam/ros2_ws/build/rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/blueboat_slam/ros2_ws/src/rviz -DCMAKE_INSTALL_PREFIX=/home/blueboat_slam/ros2_ws/install/rviz
+[0.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/blueboat_slam/ros2_ws/build/rviz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/blueboat_slam/ros2_ws/src/rviz -DCMAKE_INSTALL_PREFIX=/home/blueboat_slam/ros2_ws/install/rviz
+[0.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/blueboat_slam/ros2_ws/build/rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/blueboat_slam/ros2_ws/build/rviz -- -j32 -l32
+[0.555s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/blueboat_slam/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/blueboat_slam/ros2_ws/src/robot_description -DCMAKE_INSTALL_PREFIX=/home/blueboat_slam/ros2_ws/install/robot_description
+[0.555s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/blueboat_slam/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/blueboat_slam/ros2_ws/build/robot_description -- -j32 -l32
+[0.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/blueboat_slam/ros2_ws/build/rviz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/blueboat_slam/ros2_ws/build/rviz -- -j32 -l32
+[0.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/blueboat_slam/ros2_ws/build/rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/blueboat_slam/ros2_ws/build/rviz
+[0.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/blueboat_slam/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/blueboat_slam/ros2_ws/build/robot_description -- -j32 -l32
+[0.582s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz)
+[0.582s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/blueboat_slam/ros2_ws/build/rviz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/blueboat_slam/ros2_ws/build/rviz
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz' for CMake module files
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz' for CMake config files
+[0.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz', 'cmake_prefix_path')
+[0.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/hook/cmake_prefix_path.ps1'
+[0.584s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/hook/cmake_prefix_path.dsv'
+[0.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/hook/cmake_prefix_path.sh'
+[0.585s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz/bin'
+[0.585s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz/lib/pkgconfig/rviz.pc'
+[0.585s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz/lib/python3.10/site-packages'
+[0.586s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz/bin'
+[0.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.ps1'
+[0.586s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.dsv'
+[0.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.sh'
+[0.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.bash'
+[0.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.zsh'
+[0.587s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/blueboat_slam/ros2_ws/install/rviz/share/colcon-core/packages/rviz)
+[0.590s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/blueboat_slam/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/blueboat_slam/ros2_ws/build/robot_description
+[0.597s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_description)
+[0.598s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description' for CMake module files
+[0.598s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/blueboat_slam/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/blueboat_slam/ros2_ws/build/robot_description
+[0.598s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description' for CMake config files
+[0.598s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_description', 'cmake_prefix_path')
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/hook/cmake_prefix_path.ps1'
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/hook/cmake_prefix_path.dsv'
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/hook/cmake_prefix_path.sh'
+[0.598s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description/bin'
+[0.598s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description/lib/pkgconfig/robot_description.pc'
+[0.599s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description/lib/python3.10/site-packages'
+[0.599s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description/bin'
+[0.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.ps1'
+[0.599s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.dsv'
+[0.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.sh'
+[0.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.bash'
+[0.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.zsh'
+[0.599s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/blueboat_slam/ros2_ws/install/robot_description/share/colcon-core/packages/robot_description)
+[0.600s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz)
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz' for CMake module files
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz' for CMake config files
+[0.600s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz', 'cmake_prefix_path')
+[0.600s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/hook/cmake_prefix_path.ps1'
+[0.600s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/hook/cmake_prefix_path.dsv'
+[0.601s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/hook/cmake_prefix_path.sh'
+[0.601s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz/bin'
+[0.601s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz/lib/pkgconfig/rviz.pc'
+[0.601s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz/lib/python3.10/site-packages'
+[0.601s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/rviz/bin'
+[0.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.ps1'
+[0.601s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.dsv'
+[0.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.sh'
+[0.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.bash'
+[0.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.zsh'
+[0.602s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/blueboat_slam/ros2_ws/install/rviz/share/colcon-core/packages/rviz)
+[0.611s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_description)
+[0.611s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description' for CMake module files
+[0.611s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description' for CMake config files
+[0.611s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_description', 'cmake_prefix_path')
+[0.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/hook/cmake_prefix_path.ps1'
+[0.612s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/hook/cmake_prefix_path.dsv'
+[0.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/hook/cmake_prefix_path.sh'
+[0.612s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description/bin'
+[0.612s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description/lib/pkgconfig/robot_description.pc'
+[0.612s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description/lib/python3.10/site-packages'
+[0.612s] Level 1:colcon.colcon_core.environment:checking '/home/blueboat_slam/ros2_ws/install/robot_description/bin'
+[0.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.ps1'
+[0.612s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.dsv'
+[0.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.sh'
+[0.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.bash'
+[0.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/blueboat_slam/ros2_ws/install/robot_description/share/robot_description/package.zsh'
+[0.613s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/blueboat_slam/ros2_ws/install/robot_description/share/colcon-core/packages/robot_description)
+[0.613s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.613s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.613s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.613s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.615s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[0.616s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.616s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.616s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.617s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[0.617s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.617s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/blueboat_slam/ros2_ws/install/local_setup.ps1'
+[0.617s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/blueboat_slam/ros2_ws/install/_local_setup_util_ps1.py'
+[0.618s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/blueboat_slam/ros2_ws/install/setup.ps1'
+[0.618s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/blueboat_slam/ros2_ws/install/local_setup.sh'
+[0.619s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/blueboat_slam/ros2_ws/install/_local_setup_util_sh.py'
+[0.619s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/blueboat_slam/ros2_ws/install/setup.sh'
+[0.619s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/blueboat_slam/ros2_ws/install/local_setup.bash'
+[0.619s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/blueboat_slam/ros2_ws/install/setup.bash'
+[0.620s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/blueboat_slam/ros2_ws/install/local_setup.zsh'
+[0.620s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/blueboat_slam/ros2_ws/install/setup.zsh'

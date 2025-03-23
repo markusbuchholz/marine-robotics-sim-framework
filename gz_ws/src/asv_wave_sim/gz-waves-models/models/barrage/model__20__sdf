@@ -1,0 +1,544 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="barrage">
+    
+
+    <link name="attachment_link">
+      <pose>0 0 0 0 0 1.51</pose>
+    </link>
+
+    
+
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere1</name>
+    </include>
+
+    <include>
+      <pose>0.4 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere2</name>
+    </include>
+
+    <include>
+      <pose>0.8 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere3</name>
+    </include>
+
+    <include>
+      <pose>1.2 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere4</name>
+    </include>
+
+
+    <include>
+      <pose>1.6 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere5</name>
+    </include>
+
+
+    <include>
+      <pose>2.0 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere6</name>
+    </include>
+
+
+    <include>
+      <pose>2.4 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere7</name>
+    </include>
+
+
+    <include>
+      <pose>2.8 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere8</name>
+    </include>
+
+
+    <include>
+      <pose>3.2 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere9</name>
+    </include>
+
+
+    <include>
+      <pose>3.6 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere10</name>
+    </include>
+
+
+    <include>
+      <pose>4.0 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere11</name>
+    </include>
+
+
+    <include>
+      <pose>4.4 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere12</name>
+    </include>
+
+
+    <include>
+      <pose>4.8 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere13</name>
+    </include>
+
+    <include>
+      <pose>5.2 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere14</name>
+    </include>
+
+
+    <include>
+      <pose>5.6 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere15</name>
+    </include>
+
+    <include>
+      <pose>6.0 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere16</name>
+    </include>
+
+
+    <include>
+      <pose>6.4 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere17</name>
+    </include>
+
+
+    <include>
+      <pose>6.8 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere18</name>
+    </include>
+
+
+    <include>
+      <pose>7.2 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere19</name>
+    </include>
+
+
+    <include>
+      <pose>7.6 0 0 0 0 0</pose>
+      <uri>model://barrage_buoy</uri>
+      <name>sphere20</name>
+    </include>
+
+
+
+    <joint name="joint1" type="universal">
+      <parent>sphere1</parent>
+      <child>sphere2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>0.2 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="joint2" type="universal">
+      <parent>sphere2</parent>
+      <child>sphere3</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>0.6 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint3" type="universal">
+      <parent>sphere3</parent>
+      <child>sphere4</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>1.0 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint4" type="universal">
+      <parent>sphere4</parent>
+      <child>sphere5</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>1.4 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint5" type="universal">
+      <parent>sphere5</parent>
+      <child>sphere6</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>1.8 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint6" type="universal">
+      <parent>sphere6</parent>
+      <child>sphere7</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>2.2 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint7" type="universal">
+      <parent>sphere7</parent>
+      <child>sphere8</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>2.6 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint8" type="universal">
+      <parent>sphere8</parent>
+      <child>sphere9</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>3.0 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint9" type="universal">
+      <parent>sphere9</parent>
+      <child>sphere10</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>3.4 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="joint10" type="universal">
+      <parent>sphere10</parent>
+      <child>sphere11</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>3.8 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="joint11" type="universal">
+      <parent>sphere11</parent>
+      <child>sphere12</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>4.2 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint12" type="universal">
+      <parent>sphere12</parent>
+      <child>sphere13</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>4.6 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint13" type="universal">
+      <parent>sphere13</parent>
+      <child>sphere14</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>5.0 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint14" type="universal">
+      <parent>sphere14</parent>
+      <child>sphere15</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>5.4 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint15" type="universal">
+      <parent>sphere15</parent>
+      <child>sphere16</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>5.8 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="joint16" type="universal">
+      <parent>sphere16</parent>
+      <child>sphere17</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>6.2 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint17" type="universal">
+      <parent>sphere17</parent>
+      <child>sphere18</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>6.6 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint18" type="universal">
+      <parent>sphere18</parent>
+      <child>sphere19</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>7.0 0 0 0 0 0</pose>
+    </joint>
+
+
+    <joint name="joint19" type="universal">
+      <parent>sphere19</parent>
+      <child>sphere20</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis>
+      <axis2>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
+        </limit>
+      </axis2>
+      <pose>7.4 0 0 0 0 0</pose>
+    </joint>
+
+
+  </model>
+</sdf>

@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.9">
+  <model name="bop_panel">
+    <static>true</static>
+    <pose>0 0 0.1 0 0 0</pose>
+    <link name="block">
+      
+      <!-- <collision name="block_collision">
+        <geometry>
+          <mesh>
+            <uri>model://bop_panel/meshes/VentilBlock.stl</uri>
+          </mesh>
+        </geometry>
+      </collision> -->
+
+      <visual name="block_visual">
+        <geometry>
+          <mesh>
+            <uri>model://bop_panel/meshes/VentilBlock.obj</uri>
+             <scale>0.4 0.4 0.4</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <self_collide>false</self_collide>
+    </link>
+
+
+    <joint name="world_joint" type="fixed">
+      <child>block</child>
+      <parent>world</parent>
+      <axis>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>1.0</damping>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+
+  </model>
+</sdf>

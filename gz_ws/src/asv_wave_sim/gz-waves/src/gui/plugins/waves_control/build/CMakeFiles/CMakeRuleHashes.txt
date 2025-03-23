@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+b4c1958400b272e06a4da26d39c25b21 CMakeFiles/WavesControl_autogen
+58170515b2e5dff2a3e2927268e33094 qrc_WavesControl.cpp

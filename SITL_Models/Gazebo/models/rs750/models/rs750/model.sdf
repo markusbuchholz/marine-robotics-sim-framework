@@ -1,0 +1,755 @@
+<?xml version="1.0" ?>
+<!--
+  Copyright (C) 2020-2023  Rhys Mainwaring
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<sdf version="1.6">
+    <!-- Generated from rs750_description
+
+      rosrun xacro xacro -o rs750.urdf rs750.urdf.xacro
+      gz sdf -p rs750.urdf > rs750.sdf    
+
+      Custom edits:
+
+      1. Media location
+        replace:  model://rs750_description/meshes
+        with:     model://rs750/meshes
+
+      2. Disable ROS plugins
+
+      3. Add ArduPilot plugins
+
+      4. Rotate imu sensor PI about x
+
+    -->
+    <model name="rs750">
+        <link name="base_link">
+          <pose frame="">0 0 0 0 -0 0</pose>
+          <inertial>
+            <pose frame="">-0.150492 0 -0.613518 0 -0 0</pose>
+            <mass>75.3884</mass>
+            <inertia>
+              <ixx>22.9499</ixx>
+              <ixy>0</ixy>
+              <ixz>-5.37165</ixz>
+              <iyy>41.8716</iyy>
+              <iyz>0</iyz>
+              <izz>20.229</izz>
+            </inertia>
+          </inertial>
+          <collision name="base_link_collision">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <box>
+                <size>0.01 0.01 0.01</size>
+              </box>
+            </geometry>
+          </collision>
+          <collision name="base_link_fixed_joint_lump__anemometer_link_collision_1">
+            <pose frame="">0 0 4 0 -0 0</pose>
+            <geometry>
+              <cylinder>
+                <length>0.05</length>
+                <radius>0.02</radius>
+              </cylinder>
+            </geometry>
+          </collision>
+          <collision name="base_link_fixed_joint_lump__camera_link_collision_2">
+            <pose frame="">0.5 0 0.3 0 -0 0</pose>
+            <geometry>
+              <box>
+                <size>0.031 0.026 0.005</size>
+              </box>
+            </geometry>
+          </collision>
+          <collision name="base_link_fixed_joint_lump__hull_link_collision_3">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_hull_collision_3.stl</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <collision name="base_link_fixed_joint_lump__imu_link_collision_4">
+            <pose frame="">0 0 0.01 0 -0 0</pose>
+            <geometry>
+              <box>
+                <size>0.031 0.026 0.005</size>
+              </box>
+            </geometry>
+          </collision>
+          <collision name="base_link_fixed_joint_lump__keel_bulb_link_collision_5">
+            <pose frame="">-0.26638 0 -1.08674 3.14159 1.57079 3.14159</pose>
+            <geometry>
+              <cylinder>
+                <length>0.688</length>
+                <radius>0.048</radius>
+              </cylinder>
+            </geometry>
+          </collision>
+          <collision name="base_link_fixed_joint_lump__magnetic_link_collision_6">
+            <pose frame="">0 0 0.01 0 -0 0</pose>
+            <geometry>
+              <box>
+                <size>0.031 0.026 0.005</size>
+              </box>
+            </geometry>
+          </collision>
+          <visual name="base_link_visual">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <box>
+                <size>0.01 0.01 0.01</size>
+              </box>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Orange</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>1 0.5088 0.0468 1</ambient>
+              <diffuse>1 0.5088 0.0468 1</diffuse>
+              <specular>0.5 0.5 0.5 1</specular>
+            </material>
+          </visual>
+          
+          <!-- <visual name="base_link_fixed_joint_lump__anemometer_link_visual_1">
+            <pose frame="">0 0 4 0 -0 0</pose>
+            <geometry>
+              <cylinder>
+                <length>0.05</length>
+                <radius>0.02</radius>
+              </cylinder>
+            </geometry>
+            <material>
+              <ambient>0 1 0 1</ambient>
+              <diffuse>0 1 0 1</diffuse>
+              <specular>0.1 0.1 0.1 1</specular>
+            </material>
+          </visual> -->
+
+          <visual name="base_link_fixed_joint_lump__camera_link_visual_2">
+            <pose frame="">0.5 0 0.3 0 -0 0</pose>
+            <geometry>
+              <box>
+                <size>0.031 0.026 0.005</size>
+              </box>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Green</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0 1 0 1</ambient>
+              <diffuse>0 1 0 1</diffuse>
+              <specular>0.1 0.1 0.1 1</specular>
+            </material>
+          </visual>
+          <visual name="base_link_fixed_joint_lump__deck_link_visual_3">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_deck.stl</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Gray</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0.3 0.3 0.3 1</ambient>
+              <diffuse>0.7 0.7 0.7 1</diffuse>
+              <specular>0.01 0.01 0.01 1.0</specular>
+            </material>
+          </visual>
+          <visual name="base_link_fixed_joint_lump__hull_link_visual_4">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_hull.stl</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Red</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>1 0 0 1</ambient>
+              <diffuse>1 0 0 1</diffuse>
+              <specular>0.1 0.1 0.1 1</specular>
+            </material>
+          </visual>
+          <visual name="base_link_fixed_joint_lump__imu_link_visual_5">
+            <pose frame="">0 0 0.01 0 -0 0</pose>
+            <geometry>
+              <box>
+                <size>0.031 0.026 0.005</size>
+              </box>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Green</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0 1 0 1</ambient>
+              <diffuse>0 1 0 1</diffuse>
+              <specular>0.1 0.1 0.1 1</specular>
+            </material>
+          </visual>
+          <visual name="base_link_fixed_joint_lump__keel_bulb_link_visual_6">
+            <pose frame="">-0.26638 0 -1.08674 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_keel_bulb.stl</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Yellow</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0.9725 0.9529 0.2078 1</ambient>
+              <diffuse>0.9725 0.9529 0.2078 1</diffuse>
+              <specular>0.9725 0.9529 0.2078 1</specular>
+            </material>
+          </visual>
+          <visual name="base_link_fixed_joint_lump__magnetic_link_visual_7">
+            <pose frame="">0 0 0.01 0 -0 0</pose>
+            <geometry>
+              <box>
+                <size>0.031 0.026 0.005</size>
+              </box>
+            </geometry>
+          </visual>
+          <visual name="base_link_fixed_joint_lump__mast_link_visual_8">
+            <pose frame="">0 0 2.09 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_mast.stl</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Black</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0 0 0 1</ambient>
+              <diffuse>0 0 0 1</diffuse>
+              <specular>0.1 0.1 0.1 1</specular>
+            </material>
+          </visual>
+
+          <visual name="anemometer_visual">
+            <pose>0 0 4 0 0 0</pose>
+            <geometry>
+              <cylinder>
+                <radius>0.034</radius>
+                <length>0.04</length>
+              </cylinder>
+            </geometry>
+            <material>
+              <ambient>0.0 1.0 0.0 0.7</ambient>
+              <diffuse>0.0 1.0 0.0 0.7</diffuse>
+              <specular>0.1 0.1 0.1 0.7</specular>
+            </material>
+          </visual>
+
+          <sensor name="anemometer" type="custom" gz:type="anemometer">
+            <pose>0 0 4 0 0 0</pose>
+            <always_on>1</always_on>
+            <update_rate>30</update_rate>
+            <gz:anemometer>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0</stddev>
+              </noise>
+            </gz:anemometer>
+          </sensor>
+
+          <sensor name="navsat_sensor" type="navsat">
+            <always_on>1</always_on>
+            <update_rate>30</update_rate>
+          </sensor>
+
+          <!-- <sensor name="camera" type="camera">
+            <pose>1.0 0 0.2 0 0 0</pose>
+            <always_on>1</always_on>
+            <update_rate>30</update_rate>
+            <camera>
+              <horizontal_fov>1.047</horizontal_fov>
+              <image>
+                <width>320</width>
+                <height>240</height>
+              </image>
+              <clip>
+                <near>0.1</near>
+                <far>100</far>
+              </clip>
+            </camera>
+          </sensor> -->
+
+          <sensor name="imu_sensor" type="imu">
+            <pose>0 0 0 3.141593 0 0</pose>
+            <always_on>1</always_on>
+            <update_rate>1000</update_rate>
+          </sensor>
+        </link>
+        <link name="fore_sail_link">
+          <pose frame="">1.03125 0 0.235625 0 -0 0</pose>
+          <inertial>
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <mass>1.6384</mass>
+            <inertia>
+              <ixx>0.68512</ixx>
+              <ixy>0</ixy>
+              <ixz>0</ixz>
+              <iyy>0.699051</iyy>
+              <iyz>0</iyz>
+              <izz>0.0140313</izz>
+            </inertia>
+          </inertial>
+          <collision name="fore_sail_link_collision">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_fore_sail.stl</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="fore_sail_link_visual">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_fore_sail.stl</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/GreyTransparent</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0.5 0.5 0.5 0.75</ambient>
+              <diffuse>0.5 0.5 0.5 0.75</diffuse>
+              <specular>0.01 0.01 0.01 0.75</specular>
+            </material>
+          </visual>
+          <gravity>1</gravity>
+          <velocity_decay/>
+        </link>
+        <joint name="fore_sail_joint" type="revolute">
+          <child>fore_sail_link</child>
+          <parent>base_link</parent>
+          <axis>
+            <xyz>-0.271653 0 0.962395</xyz>
+            <limit>
+              <lower>-1.39626</lower>
+              <upper>1.39626</upper>
+            </limit>
+            <dynamics>
+              <damping>0.001</damping>
+            </dynamics>
+          </axis>
+        </joint>
+        <link name="keel_fin_link">
+          <pose frame="">-0.16255 0 -0.54053 0 -0 0</pose>
+          <inertial>
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <mass>8.192</mass>
+            <inertia>
+              <ixx>0.50986</ixx>
+              <ixy>0</ixy>
+              <ixz>0</ixz>
+              <iyy>0.520793</iyy>
+              <iyz>0</iyz>
+              <izz>0.0114365</izz>
+            </inertia>
+          </inertial>
+          <collision name="keel_fin_link_collision">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_keel_fin_collision_2.stl</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="keel_fin_link_visual">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_keel_fin.stl</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Yellow</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0.9725 0.9529 0.2078 1</ambient>
+              <diffuse>0.9725 0.9529 0.2078 1</diffuse>
+              <specular>0.9725 0.9529 0.2078 1</specular>
+            </material>
+          </visual>
+          <gravity>1</gravity>
+          <velocity_decay/>
+        </link>
+        <joint name="keel_fin_joint" type="fixed">
+          <child>keel_fin_link</child>
+          <parent>base_link</parent>
+          <axis>
+            <dynamics>
+              <damping>0.001</damping>
+            </dynamics>
+            <xyz>0 0 1</xyz>
+            <limit>
+              <lower>-1e+16</lower>
+              <upper>1e+16</upper>
+            </limit>
+          </axis>
+        </joint>
+        <link name="main_sail_link">
+          <pose frame="">-0.02625 0 0.291875 0 -0 0</pose>
+          <inertial>
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <mass>3.2768</mass>
+            <inertia>
+              <ixx>2.26502</ixx>
+              <ixy>0</ixy>
+              <ixz>0</ixz>
+              <iyy>2.37677</iyy>
+              <iyz>0</iyz>
+              <izz>0.111949</izz>
+            </inertia>
+          </inertial>
+          <collision name="main_sail_link_collision">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_main_sail.stl</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="main_sail_link_visual">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_main_sail.stl</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/GreyTransparent</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0.5 0.5 0.5 0.75</ambient>
+              <diffuse>0.5 0.5 0.5 0.75</diffuse>
+              <specular>0.01 0.01 0.01 0.75</specular>
+            </material>
+          </visual>
+          <gravity>1</gravity>
+          <velocity_decay/>
+        </link>
+        <joint name="main_sail_joint" type="revolute">
+          <child>main_sail_link</child>
+          <parent>base_link</parent>
+          <axis>
+            <xyz>0 0 1</xyz>
+            <limit>
+              <lower>-1.39626</lower>
+              <upper>1.39626</upper>
+            </limit>
+            <dynamics>
+              <damping>0.001</damping>
+            </dynamics>
+          </axis>
+        </joint>
+        <link name="rudder_link">
+          <pose frame="">-1.2436 0 -0.0487 0 -0 0</pose>
+          <inertial>
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <mass>3.2768</mass>
+            <inertia>
+              <ixx>0.0716835</ixx>
+              <ixy>0</ixy>
+              <ixz>0</ixz>
+              <iyy>0.0760567</iyy>
+              <iyz>0</iyz>
+              <izz>0.00457459</izz>
+            </inertia>
+          </inertial>
+          <collision name="rudder_link_collision">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_rudder_collision_3.stl</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="rudder_link_visual">
+            <pose frame="">0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>1 1 1</scale>
+                <uri>model://rs750/meshes/rs750_rudder.stl</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- <script>
+                <name>Gazebo/Yellow</name>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+              </script> -->
+              <ambient>0.9725 0.9529 0.2078 1</ambient>
+              <diffuse>0.9725 0.9529 0.2078 1</diffuse>
+              <specular>0.9725 0.9529 0.2078 1</specular>
+            </material>
+          </visual>
+          <gravity>1</gravity>
+          <velocity_decay/>
+        </link>
+        <joint name="rudder_joint" type="revolute">
+          <child>rudder_link</child>
+          <parent>base_link</parent>
+          <axis>
+            <xyz>0 0 1</xyz>
+            <limit>
+              <lower>-1.5708</lower>
+              <upper>1.5708</upper>
+            </limit>
+            <dynamics>
+              <damping>0.001</damping>
+            </dynamics>
+          </axis>
+        </joint>
+
+        <!-- Joint state and force plugins -->
+        <plugin filename="gz-sim-joint-state-publisher-system"
+          name="gz::sim::systems::JointStatePublisher">
+        </plugin>
+        <plugin filename="gz-sim-apply-joint-force-system"
+          name="gz::sim::systems::ApplyJointForce">
+          <joint_name>rudder_joint</joint_name>
+        </plugin>
+
+        <plugin filename="gz-sim-joint-position-controller-system"
+            name="gz::sim::systems::JointPositionController">
+          <joint_name>rudder_joint</joint_name>
+          <topic>/rudder_joint/cmd_pos</topic>
+          <p_gain>40</p_gain>
+          <i_gain>0.0</i_gain>
+          <d_gain>0.1</d_gain>
+          <i_max>1</i_max>
+          <i_min>-1</i_min>
+          <cmd_max>50</cmd_max>
+          <cmd_min>-50</cmd_min>
+        </plugin>
+
+        <plugin name="gz::sim::systems::SailPositionController"
+            filename="asv_sim2-sail-position-controller-system">
+          <joint_name>fore_sail_joint</joint_name>
+          <topic>/fore_sail_joint/cmd_pos</topic>
+          <p_gain>50</p_gain>
+          <i_gain>0.0</i_gain>
+          <d_gain>0.1</d_gain>
+          <i_max>1</i_max>
+          <i_min>-1</i_min>
+          <cmd_max>200</cmd_max>
+          <cmd_min>-200</cmd_min>
+        </plugin>
+
+        <plugin name="gz::sim::systems::SailPositionController"
+            filename="asv_sim2-sail-position-controller-system">
+          <joint_name>main_sail_joint</joint_name>
+          <topic>/main_sail_joint/cmd_pos</topic>
+          <p_gain>50</p_gain>
+          <i_gain>0.0</i_gain>
+          <d_gain>0.1</d_gain>
+          <i_max>1</i_max>
+          <i_min>-1</i_min>
+          <cmd_max>200</cmd_max>
+          <cmd_min>-200</cmd_min>
+        </plugin>
+
+        <!-- Lift drag plugins -->
+        <plugin name="gz::sim::systems::SailLiftDrag"
+            filename="asv_sim2-sail-lift-drag-system">
+          <a0>0.0</a0>
+          <cla>6.2832</cla>
+          <alpha_stall>0.1592</alpha_stall>
+          <cla_stall>-0.7083</cla_stall>
+          <cda>0.63662</cda>
+          <area>1.81</area>
+          <fluid_density>1.2</fluid_density>
+          <forward>1 0 0</forward>
+          <upward>0 1 0</upward>
+          <cp>-0.30875 0 1.30625</cp>
+          <link_name>main_sail_link</link_name>
+          <radial_symmetry>1</radial_symmetry>
+          <topic>lift_drag</topic>
+        </plugin>
+        <plugin name="gz::sim::systems::SailLiftDrag"
+            filename="asv_sim2-sail-lift-drag-system">
+          <a0>0.0</a0>
+          <cla>6.2832</cla>
+          <alpha_stall>0.1592</alpha_stall>
+          <cla_stall>-0.7083</cla_stall>
+          <cda>0.63662</cda>
+          <area>1.43</area>
+          <fluid_density>1.2</fluid_density>
+          <forward>1 0 0</forward>
+          <upward>0 1 0</upward>
+          <cp>-0.605666667 0 1.20528</cp>
+          <link_name>fore_sail_link</link_name>
+          <radial_symmetry>1</radial_symmetry>
+          <topic>lift_drag</topic>
+        </plugin>
+        <plugin name="gz::sim::systems::FoilLiftDrag"
+            filename="asv_sim2-foil-lift-drag-system">
+          <a0>0.0</a0>
+          <cla>6.2832</cla>
+          <alpha_stall>0.1592</alpha_stall>
+          <cla_stall>-0.7083</cla_stall>
+          <cda>0.63662</cda>
+          <area>0.17</area>
+          <fluid_density>1000</fluid_density>
+          <forward>1 0 0</forward>
+          <upward>0 1 0</upward>
+          <cp>0 0 0</cp>
+          <link_name>keel_fin_link</link_name>
+          <radial_symmetry>1</radial_symmetry>
+          <topic>lift_drag</topic>
+        </plugin>
+        <plugin name="gz::sim::systems::FoilLiftDrag"
+            filename="asv_sim2-foil-lift-drag-system">
+          <a0>0.0</a0>
+          <cla>6.2832</cla>
+          <alpha_stall>0.1592</alpha_stall>
+          <cla_stall>-0.7083</cla_stall>
+          <cda>0.63662</cda>
+          <area>0.12</area>
+          <fluid_density>1000</fluid_density>
+          <forward>1 0 0</forward>
+          <upward>0 1 0</upward>
+          <cp>-0.06 0 -0.2</cp>
+          <link_name>rudder_link</link_name>
+          <radial_symmetry>1</radial_symmetry>
+          <topic>lift_drag</topic>
+        </plugin>
+
+        <!-- Hydrodynamics plugin -->
+        <plugin
+          filename="gz-waves1-hydrodynamics-system"
+          name="gz::sim::systems::Hydrodynamics">
+
+          <!-- <enable>rs750::base_link::base_link::base_link_collision</enable> -->
+          <!-- <enable>rs750::base_link::base_link_fixed_joint_lump__anemometer_link_collision_1</enable> -->
+          <!-- <enable>rs750::base_link::base_link_fixed_joint_lump__camera_link_collision_2</enable> -->
+          <enable>rs750::base_link::base_link_fixed_joint_lump__hull_link_collision_3</enable>
+          <!-- <enable>rs750::base_link::base_link_fixed_joint_lump__imu_link_collision_4</enable> -->
+          <!-- <enable>rs750::base_link::base_link_fixed_joint_lump__keel_bulb_link_collision_5</enable> -->
+          <!-- <enable>rs750::base_link::base_link_fixed_joint_lump__magnetic_link_collision_6</enable> -->
+          <!-- <enable>rs750::fore_sail_link::fore_sail_link_collision</enable> -->
+          <!-- <enable>rs750::main_sail_link::main_sail_link_collision</enable> -->
+          <!-- <enable>rs750::keel_fin_link::keel_fin_link_collision</enable> -->
+
+          <hydrodynamics>
+            <damping_on>1</damping_on>
+            <viscous_drag_on>1</viscous_drag_on>
+            <pressure_drag_on>1</pressure_drag_on>
+          </hydrodynamics>
+          <markers>
+            <update_rate>10</update_rate>
+            <water_patch>0</water_patch>
+            <waterline>0</waterline>
+            <underwater_surface>0</underwater_surface>
+          </markers>
+        </plugin>
+      
+        <!-- ArduPilot plugin -->
+        <plugin name="ArduPilotPlugin" filename="ArduPilotPlugin">
+        <fdm_addr>127.0.0.1</fdm_addr>
+        <fdm_port_in>9002</fdm_port_in>
+
+        <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+        <lock_step>1</lock_step>
+        <gazeboXYZToNED>0 0 0 3.141593 0 1.57079632</gazeboXYZToNED>
+        <modelXYZToAirplaneXForwardZDown>0 0 0 3.141593 0 0</modelXYZToAirplaneXForwardZDown>
+        <imuName>base_link::imu_sensor</imuName>
+        <anemometer>base_link::anemometer</anemometer>
+
+        <!--
+          SERVO1_FUNCTION 26 (GroundSteering)
+          SERVO1_MAX 2000
+          SERVO1_MIN 1000
+
+          Input command in [0, 1]
+          Target rudder position in [-PI/4, PI/4]
+         -->
+        <control channel="0">
+          <jointName>rudder_joint</jointName>
+          <useForce>1</useForce>
+          <multiplier>1.570796</multiplier>
+          <offset>-0.5</offset>
+          <servo_max>2000</servo_max>
+          <servo_min>1000</servo_min>
+          <type>COMMAND</type>
+          <cmd_topic>/rudder_joint/cmd_pos</cmd_topic>
+        </control>
+
+        <!--
+          SERVO4_FUNCTION 89 (MainSail)
+          SERVO4_MAX 2000
+          SERVO4_MIN 1000
+
+          Input command in [0, 1]
+          Desired sail angle in [0, 80] deg
+
+          If the sails are allowed to sheet out too far 
+          the boat will not gybe.
+         -->
+        <control channel="3">
+          <jointName>fore_sail_joint</jointName>
+          <useForce>1</useForce>
+          <multiplier>1.57079632</multiplier>
+          <offset>0</offset>
+          <type>COMMAND</type>
+          <cmd_topic>/fore_sail_joint/cmd_pos</cmd_topic>
+        </control>
+
+        <control channel="3">
+          <jointName>main_sail_joint</jointName>
+          <useForce>1</useForce>
+          <multiplier>1.57079632</multiplier>
+          <offset>0</offset>
+          <servo_max>2000</servo_max>
+          <servo_min>1000</servo_min>
+          <type>COMMAND</type>
+          <cmd_topic>/main_sail_joint/cmd_pos</cmd_topic>
+        </control>
+
+      </plugin>
+
+    </model>
+</sdf>

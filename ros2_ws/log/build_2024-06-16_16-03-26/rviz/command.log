@@ -1,0 +1,6 @@
+Invoking command in '/home/blueboat_slam/ros2_ws/build/rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/blueboat_slam/ros2_ws/src/rviz -DCMAKE_INSTALL_PREFIX=/home/blueboat_slam/ros2_ws/install/rviz
+Invoked command in '/home/blueboat_slam/ros2_ws/build/rviz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/blueboat_slam/ros2_ws/src/rviz -DCMAKE_INSTALL_PREFIX=/home/blueboat_slam/ros2_ws/install/rviz
+Invoking command in '/home/blueboat_slam/ros2_ws/build/rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/blueboat_slam/ros2_ws/build/rviz -- -j32 -l32
+Invoked command in '/home/blueboat_slam/ros2_ws/build/rviz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/blueboat_slam/ros2_ws/build/rviz -- -j32 -l32
+Invoking command in '/home/blueboat_slam/ros2_ws/build/rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/blueboat_slam/ros2_ws/build/rviz
+Invoked command in '/home/blueboat_slam/ros2_ws/build/rviz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/blueboat_slam/ros2_ws/build/rviz

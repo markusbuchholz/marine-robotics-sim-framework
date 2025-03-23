@@ -1,0 +1,15 @@
+/home/blueboat_slam/ros2_ws/install/rviz/share/ament_index/resource_index/package_run_dependencies/rviz
+/home/blueboat_slam/ros2_ws/install/rviz/share/ament_index/resource_index/parent_prefix_path/rviz
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/environment/ament_prefix_path.sh
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/environment/ament_prefix_path.dsv
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/environment/path.sh
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/environment/path.dsv
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/local_setup.bash
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/local_setup.sh
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/local_setup.zsh
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/local_setup.dsv
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.dsv
+/home/blueboat_slam/ros2_ws/install/rviz/share/ament_index/resource_index/packages/rviz
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/cmake/rvizConfig.cmake
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/cmake/rvizConfig-version.cmake
+/home/blueboat_slam/ros2_ws/install/rviz/share/rviz/package.xml

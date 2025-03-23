@@ -1,0 +1,83 @@
+<sdf version="1.6">
+  <model name="wavetank">
+    <static>true</static>
+
+    <!-- Tank base -->
+    <link name="base">
+      <visual name="base_visual">
+        <geometry>
+          <box>
+            <size>11 10 0.2</size> <!-- Length changed to 11 -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 0.5 0.9</ambient>
+          <diffuse>0.0 0.0 0.5 0.9</diffuse>
+        </material>
+        <pose>0 0 -0.1 0 0 0</pose>
+      </visual>
+    </link>
+
+    <!-- Tank walls -->
+    <link name="walls">
+      <!-- Front wall -->
+      <visual name="front_wall_visual">
+        <geometry>
+          <box>
+            <size>11 0.1 3.5</size> <!-- Length changed to 11 -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 0.4</ambient> <!-- Semi-transparent -->
+          <diffuse>0.5 0.5 0.5 0.4</diffuse> <!-- Semi-transparent -->
+        </material>
+        <pose>0 -5 1.75 0 0 0</pose>
+      </visual>
+
+      <!-- Back wall -->
+      <visual name="back_wall_visual">
+        <geometry>
+          <box>
+            <size>11 0.1 3.5</size> <!-- Length changed to 11 -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 0.4</ambient> <!-- Semi-transparent -->
+          <diffuse>0.5 0.5 0.5 0.4</diffuse> <!-- Semi-transparent -->
+        </material>
+        <pose>0 5 1.75 0 0 0</pose>
+      </visual>
+
+      <!-- Left wall -->
+      <visual name="left_wall_visual">
+        <geometry>
+          <box>
+            <size>0.1 10 3.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 0.4</ambient> <!-- Semi-transparent -->
+          <diffuse>0.5 0.5 0.5 0.4</diffuse> <!-- Semi-transparent -->
+        </material>
+        <pose>-5.5 0 1.75 0 0 0</pose> <!-- Position adjusted for new length -->
+      </visual>
+
+      <!-- Right wall -->
+      <visual name="right_wall_visual">
+        <geometry>
+          <box>
+            <size>0.1 10 3.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 0.4</ambient> <!-- Semi-transparent -->
+          <diffuse>0.5 0.5 0.5 0.4</diffuse> <!-- Semi-transparent -->
+        </material>
+        <pose>5.5 0 1.75 0 0 0</pose> <!-- Position adjusted for new length -->
+      </visual>
+    </link>
+
+
+
+  </model>
+</sdf>
