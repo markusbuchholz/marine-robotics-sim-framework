@@ -118,6 +118,9 @@ The spheres are connected sequentially, with each pair of adjacent spheres conne
 The joint allows the spheres to rotate relative to each other in two perpendicular directions, simulating the flexibility of an actual underwater tether.
 We consider the tether to hold the ```catenary``` shape. 
 
+The length of the tether can be adjusted using ```multirobot_mission_simulation.launch``` file. <br>
+The physical parameters of the tether behavior can be modified using ```model.sdf``` in the corresponding ```tether_part```. 
+
 
 ```xml
 <?xml version="1.0" ?>
