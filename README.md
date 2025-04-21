@@ -116,7 +116,7 @@ or
 
 ```bash
 ros2 topic pub --once /bluerov2/waypoint std_msgs/msg/Float32MultiArray "{data: [1.0, 0.0, -2.0, 2.0, 2.0, -2.0, 3.0, -2.0, -4.0]}"
-```bash
+```
 
 ## ROS 2 BlueBoat
 
