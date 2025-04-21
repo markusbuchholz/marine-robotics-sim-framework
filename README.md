@@ -5,6 +5,10 @@ The framework utilizes GazeboSim, enhanced with realistic marine environment plu
 
 ![gazebo](https://github.com/user-attachments/assets/56ec1bcf-d860-478f-aedd-edbe9974b36e)
 
+![dancing_tetheronline](https://github.com/user-attachments/assets/d3403021-0162-42b6-970b-c693c5bc5b94)
+
+
+
 ## Prerequisites
 
 - Download and Install [QGroundControl](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html) (optional).
