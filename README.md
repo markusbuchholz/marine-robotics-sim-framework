@@ -94,15 +94,32 @@ sim_vehicle.py -v Rover -f gazebo-rover --model JSON --map --console -l 55.99541
 
 There are simple ROS 2 interfaces to wrap ```mavlink```. 
 
-BlueROV2,
-
 ```bash
 gz_ws/extras_interface
 
 python3 ros2_bluerov2_interface.py
 ```
 
-BlueBoat,
+For the BlueRov2, you can start with a simple ROS 2 interface and command motion,
+```bash
+gz_ws/extras_interface
+
+python3 ros2_wp_rov_pusher.py
+```
+
+Use the following topics to move the vehicle,
+
+```bash
+ros2 topic pub --once /bluerov2/waypoint std_msgs/msg/Float32MultiArray "{data: [0.0, 0.0, -2.0]}"
+```
+or
+
+```bash
+ros2 topic pub --once /bluerov2/waypoint std_msgs/msg/Float32MultiArray "{data: [1.0, 0.0, -2.0, 2.0, 2.0, -2.0, 3.0, -2.0, -4.0]}"
+```bash
+
+
+## ROS 2 BlueBoat
 
 ```bash
 gz_ws/extras_interface
