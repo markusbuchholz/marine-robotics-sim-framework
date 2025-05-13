@@ -21,7 +21,7 @@ The framework utilizes GazeboSim, enhanced with realistic marine environment plu
 
 ---
 
-## Build
+## Build Docker
 
 ```bash
 git clone https://github.com/markusbuchholz/marine-robotics-sim-framework/git
@@ -32,7 +32,7 @@ sudo ./build.sh
 
 ```
 
-## Run
+## Run Docker
 
 Adjust in ```run.sh```.
 
