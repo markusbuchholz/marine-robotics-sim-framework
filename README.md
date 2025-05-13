@@ -8,6 +8,10 @@ The framework utilizes GazeboSim, enhanced with realistic marine environment plu
 ![dancing_tetheronline](https://github.com/user-attachments/assets/d3403021-0162-42b6-970b-c693c5bc5b94)
 
 
+## System Architecture
+
+![image](https://github.com/user-attachments/assets/fe4ecb74-ca2f-45f6-a778-da39253af1d8)
+
 
 ## Prerequisites
 
