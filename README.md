@@ -10,7 +10,7 @@ The framework utilizes GazeboSim, enhanced with realistic marine environment plu
 
 ## System Architecture
 
-<img src="https://github.com/user-attachments/assets/fe4ecb74-ca2f-45f6-a778-da39253af1d8" alt="image" width="200" height="150" />
+<img src="https://github.com/user-attachments/assets/fe4ecb74-ca2f-45f6-a778-da39253af1d8" alt="image" width="600" height="500" />
 
 ## Prerequisites
 
