@@ -230,6 +230,7 @@ ros2 run plotjuggler plotjuggler
 ```
 
 ## Poster
+[Poster](extras/your-doc.pdf)
 
 Poster during [workshop](https://sites.google.com/view/aq2uasim/home)
 
