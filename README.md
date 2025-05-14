@@ -230,6 +230,10 @@ python3 dynamic_update_cabel_pos.py
 ros2 run plotjuggler plotjuggler
 ```
 
+## Poster
+
+Poster during [workshop](https://sites.google.com/view/aq2uasim/home)
+
 ## Acknowledgement
 
 - [Rhys Mainwaring](https://github.com/srmainwaring)
